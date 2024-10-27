@@ -13,7 +13,7 @@ public class BallMovement : MonoBehaviour
         LaunchBall();
     }
 
-    private void LaunchBall()
+    public void LaunchBall()
     {
         Vector2 direction = new Vector2(Random.Range(-1f, 1f), 1).normalized;
         ball.velocity = direction * InitSpeed;
@@ -22,6 +22,12 @@ public class BallMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision) 
     {
         ball.velocity = ball.velocity.normalized * InitSpeed;
+
+        if (collision.gameObject.CompareTag("LoseZone"))
+        {
+            GameManager.instance.Loselife();
+        }
         
     }
+
 }
