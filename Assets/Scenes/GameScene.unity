@@ -542,6 +542,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1753911984351797517, guid: 7a0c4374ba44a7940aae0bf8ac4dd888, type: 3}
   m_PrefabInstance: {fileID: 334475243}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &578404179
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 578404181}
+  - component: {fileID: 578404180}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &578404180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578404179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b93a38994c1798045a56a8196c6e7db2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lives: 3
+  player: {fileID: 1156665202}
+  ball: {fileID: 1345951971}
+--- !u!4 &578404181
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578404179}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &579939340 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1753911984351797517, guid: 7a0c4374ba44a7940aae0bf8ac4dd888, type: 3}
@@ -1653,7 +1700,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156665198}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1746,7 +1793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1156665200}
-  speed: 25
+  speed: 15
   limit: 9
   inputValue: 0
 --- !u!1001 &1191739360
@@ -2174,7 +2221,7 @@ GameObject:
   - component: {fileID: 1345951972}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2295,7 +2342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4e52748a61183a4292e22a6f63228c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitSpeed: 8
+  InitSpeed: 6
 --- !u!4 &1418101563 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1753911984351797517, guid: 7a0c4374ba44a7940aae0bf8ac4dd888, type: 3}
@@ -3433,8 +3480,8 @@ GameObject:
   - component: {fileID: 2146306717}
   - component: {fileID: 2146306716}
   m_Layer: 0
-  m_Name: Wall3
-  m_TagString: Untagged
+  m_Name: LoseZone
+  m_TagString: LoseZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
