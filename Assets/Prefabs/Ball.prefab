@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2710288340930560055}
   - component: {fileID: 2710288340930560054}
   - component: {fileID: 2710288340930560053}
-  - component: {fileID: 2710288340930560052}
-  - component: {fileID: 2710288340930560048}
+  - component: {fileID: 8196726387756593326}
+  - component: {fileID: 5983389054425607904}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Ball
@@ -103,28 +103,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!50 &2710288340930560052
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2710288340930560011}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: 0f744abb94ce03240bc285e5f2b4d3fb, type: 2}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &2710288340930560048
+--- !u!114 &8196726387756593326
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,4 +115,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4e52748a61183a4292e22a6f63228c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitSpeed: 6
+  InitSpeed: 10
+  ball: {fileID: 5983389054425607904}
+--- !u!50 &5983389054425607904
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2710288340930560011}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 6200000, guid: 0f744abb94ce03240bc285e5f2b4d3fb, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

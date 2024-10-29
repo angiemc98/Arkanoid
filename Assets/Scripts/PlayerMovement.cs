@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
    public Rigidbody2D rb;
    public float speed = 25f;
    public float limit= 8f;
-   public float inputValue;
+   private float inputValue;
   
 
     

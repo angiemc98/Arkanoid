@@ -21,17 +21,7 @@ public class GameManager : MonoBehaviour
     private int totalScore = 0;
     public static GameManager instance; // Singleton para acceder desde otros scripts
 
-
-    private void Start()
-    {
-        playerStartPos = player.position;
-        ballStartPos = ball.position;
-        playerScale = player.transform.localScale;
-        totalBlocks = GameObject.FindGameObjectsWithTag("Block").Length;
-        UpdateScoreText(); // Inicializa el puntaje en el HUD
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-    private void Awake()
+      private void Awake()
     {
         // Configurar GameManager como Singleton
         if (instance == null)
@@ -45,6 +35,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        playerStartPos = player.position;
+        ballStartPos = ball.position;
+        playerScale = player.transform.localScale;
+        totalBlocks = GameObject.FindGameObjectsWithTag("Block").Length;
+        UpdateScoreText(); // Inicializa el puntaje en el HUD
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+  
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         scoreText = GameObject.FindGameObjectWithTag("ScoreText").GetComponent<TextMeshProUGUI>();
@@ -66,8 +66,11 @@ public class GameManager : MonoBehaviour
 
     private void UpdateScoreText()
     {
-        // Actualizar el texto del HUD con el puntaje actual
-        scoreText.text = "Score: " + totalScore;
+        if (scoreText != null)
+        {
+            scoreText.text = "Score: " + totalScore;
+        }
+        
     }
     public void Loselife()
     {
@@ -85,6 +88,11 @@ public class GameManager : MonoBehaviour
     
     public void ResetPosition()
     {
+          if (ball == null)
+    {
+        GameObject newBall = Instantiate(ballPrefab, ballStartPos, Quaternion.identity);
+        ball = newBall.transform; // Asigna la nueva bola a la variable ball
+    }
         player.position = playerStartPos;
         ball.position = ballStartPos;
         ball.GetComponent<BallMovement>().LaunchBall();

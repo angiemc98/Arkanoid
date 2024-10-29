@@ -2268,7 +2268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2710288340930560052, guid: 252ed0fe1c0aa264d9337a1c74613651, type: 3}
       propertyPath: m_Constraints
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2710288340930560055, guid: 252ed0fe1c0aa264d9337a1c74613651, type: 3}
       propertyPath: m_RootOrder
@@ -2527,7 +2527,7 @@ GameObject:
   - component: {fileID: 1116980068}
   m_Layer: 5
   m_Name: Points
-  m_TagString: Untagged
+  m_TagString: ScoreText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
