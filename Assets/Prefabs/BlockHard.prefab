@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3686394869036551946}
   - component: {fileID: 8995084733613108151}
-  - component: {fileID: 3653728725152061263}
   - component: {fileID: 8559280838566763300}
+  - component: {fileID: 2477783296938938452}
   m_Layer: 0
   m_Name: BlockHard
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,20 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3653728725152061263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2076116294071611983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d9d3ed863b54774494db64133206bcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dataPoints: 2
-  scoreValue: 20
 --- !u!61 &8559280838566763300
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -126,3 +112,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2477783296938938452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076116294071611983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d9d3ed863b54774494db64133206bcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataPoints: 2
+  scoreValue: 20

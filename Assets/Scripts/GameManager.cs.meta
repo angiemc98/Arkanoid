@@ -3,7 +3,12 @@ guid: b93a38994c1798045a56a8196c6e7db2
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - player: {fileID: 7441775095194995743, guid: d4c35e42102fdec4b994db0a011e1555, type: 3}
+  - ball: {fileID: 2710288340930560055, guid: 252ed0fe1c0aa264d9337a1c74613651, type: 3}
+  - playerPaddle: {fileID: 7441775095194995715, guid: d4c35e42102fdec4b994db0a011e1555, type: 3}
+  - ballPrefab: {fileID: 2710288340930560011, guid: 252ed0fe1c0aa264d9337a1c74613651, type: 3}
+  - scoreText: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

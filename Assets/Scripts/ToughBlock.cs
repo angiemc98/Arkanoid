@@ -14,7 +14,9 @@ public class ToughBlock : MonoBehaviour
             dataPoints--;
             if (dataPoints <= 0)
             {
+                GameManager.instance.AddScore(scoreValue);
                 Destroy(gameObject);
+                GameManager.instance.CheckBlocksRemaining();
             }
         }
    }

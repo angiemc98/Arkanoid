@@ -11,7 +11,9 @@ public class BlockBasic : MonoBehaviour
   {
     if (collision.gameObject.CompareTag("Ball"))
     {
+        GameManager.instance.AddScore(scoreValue);
         Destroy(gameObject);
+        GameManager.instance.CheckBlocksRemaining();
     }
   }
   
