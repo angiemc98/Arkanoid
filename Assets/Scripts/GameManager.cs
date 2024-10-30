@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     private Vector2 playerStartPos;
     private Vector2 ballStartPos;
     private Vector3 playerScale;
-    public TextMeshProUGUI scoreText; // Referencia al texto del HUD usando TextMeshProUGUI
+    public TextMeshProUGUI scoreText; // Referencia al texto del HUD
     private int totalScore = 0;
     public static GameManager instance; // Singleton para acceder desde otros scripts
   
