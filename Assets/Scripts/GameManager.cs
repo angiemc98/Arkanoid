@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
@@ -20,6 +19,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText; // Referencia al texto del HUD usando TextMeshProUGUI
     private int totalScore = 0;
     public static GameManager instance; // Singleton para acceder desde otros scripts
+  
 
       private void Awake()
     {
@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
         totalBlocks = GameObject.FindGameObjectsWithTag("Block").Length;
         UpdateScoreText(); // Inicializa el puntaje en el HUD
         SceneManager.sceneLoaded += OnSceneLoaded;
+       
     }
   
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -78,13 +79,14 @@ public class GameManager : MonoBehaviour
         if (lives <= 0)
         {
             Debug.Log("Game Over");
+            SceneManager.LoadScene("GameOver");// Activa el canvas de Game Over
+            Time.timeScale = 0f; // Pausa el juego
         }
         else
         {
             ResetPosition();
         }
     }
-
     
     public void ResetPosition()
     {
