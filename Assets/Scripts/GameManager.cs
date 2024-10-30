@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
         if (lives <= 0)
         {
             Debug.Log("Game Over");
-            SceneManager.LoadScene("GameOver");// Activa el canvas de Game Over
+        
             Time.timeScale = 0f; // Pausa el juego
         }
         else
